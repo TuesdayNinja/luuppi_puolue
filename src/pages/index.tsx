@@ -2,7 +2,9 @@ import "../styles/global.css"
 
 import Header from "../components/header"
 import Logo from "../components/logo"
+import Luuppi_puolue from "../components/luuppi_puolue"
 import React from "react"
+import Vaalit from "../components/vaalit"
 import styled from "styled-components"
 import tiilitausta from "./images/tiilitausta.png"
 
@@ -20,6 +22,8 @@ export default function Home() {
     <Background>
       <Header />
       <Logo />
+      <Luuppi_puolue />
+      <Vaalit />
     </Background>
   )
 }

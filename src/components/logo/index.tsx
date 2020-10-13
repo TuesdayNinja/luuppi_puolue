@@ -46,6 +46,7 @@ const LogoContainer = styled.div`
   position: relative;
   margin: 0 auto;
   width: 60vw;
+  height: 100%;
   margin-top: -4rem;
 `
 

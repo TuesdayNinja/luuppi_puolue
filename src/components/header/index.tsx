@@ -9,10 +9,12 @@ const HeaderContainer = styled.div`
 `
 
 const Tekija = styled.img`
-  width: 10vw;
+  height: 15vh;
+  width: auto;
+  display: block;
 `
 
-export default function Home() {
+export default function Header() {
   return (
     <HeaderContainer>
       <Tekija src={tekija} alt="" />
