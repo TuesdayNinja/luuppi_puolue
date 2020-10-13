@@ -6,7 +6,7 @@ import Luuppi_puolue from "../components/luuppi_puolue"
 import React from "react"
 import Vaalit from "../components/vaalit"
 import styled from "styled-components"
-import tiilitausta from "./images/tiilitausta.png"
+import tiilitausta from "./images/tiilitausta_pienempi.png"
 
 const Background = styled.div`
   background-image: url(${tiilitausta});

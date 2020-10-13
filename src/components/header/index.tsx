@@ -3,7 +3,6 @@ import styled from "styled-components"
 import tekija from "./images/tekija_logo.png"
 
 const HeaderContainer = styled.div`
-  width: 100vw;
   display: flex;
   padding: 2rem;
 `
