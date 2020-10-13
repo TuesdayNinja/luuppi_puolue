@@ -59,7 +59,7 @@ const Backglow = styled.img`
   position: absolute;
   width: 100%;
   mix-blend-mode: soft-light;
-  opacity: 70%;
+  opacity: 80%;
 `
 
 const FlickerArrowD = styled(NeonSignText)`

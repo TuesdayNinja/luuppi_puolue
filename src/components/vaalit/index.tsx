@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import ArrowIosDownward from "@styled-icons/evaicons-solid/ArrowIosDownward"
 import ArrowIosUpward from "@styled-icons/evaicons-solid/ArrowIosUpward"
 import { Collapse } from "react-collapse"
+import Juliste from "../juliste"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -120,6 +121,7 @@ export default function Vaalit() {
         </ThemeContainer>
       </Collapse>
       <TextPink>Poliittisesti sitoutumattomampi ylioppilaskunta</TextPink>
+      <Juliste />
     </Container>
   )
 }

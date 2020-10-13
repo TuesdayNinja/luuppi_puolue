@@ -1,0 +1,26 @@
+[
+  {
+    "number": 119,
+    "name": "Paavo Keski-Orvola",
+    "quote": "Silloin kun tehdään niin tehdään kunnolla.",
+    "image": "paavo"
+  },
+  {
+    "number": 120,
+    "name": "Mirva Pekkola",
+    "quote": "",
+    "image": "mirva"
+  },
+  {
+    "number": 121,
+    "name": "Loviisa Hurme",
+    "quote": "Tilastoja, faktoja ja analyysejä päätöksentekoon.",
+    "image": "loviisa"
+  },
+  {
+    "number": 122,
+    "name": "Lilja Jere",
+    "quote": "Luupinkiilto silmissä edariin.",
+    "image": "jere"
+  }
+]
