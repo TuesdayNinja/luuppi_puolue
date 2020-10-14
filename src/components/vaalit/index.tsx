@@ -35,7 +35,6 @@ const ArrowUpPink = styled(ArrowIosUpward)`
 
 const Headline = styled.h1`
   color: #e8fffc;
-  font-family: "Joy Neon Hollow";
   font-size: 4.5rem;
   text-shadow: 0.1vw 0vw 0vw rgba(193, 255, 247, 0.5),
     0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
@@ -55,7 +54,6 @@ const Headline = styled.h1`
 
 const HeadlineMobile = styled.h1`
   color: #e8fffc;
-  font-family: "Joy Neon Hollow";
   font-size: 3rem;
   text-shadow: 0.1vw 0vw 0vw rgba(193, 255, 247, 0.5),
     0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
@@ -72,7 +70,6 @@ const HeadlineMobile = styled.h1`
 
 const TextPink = styled.h2`
   color: #f49bc2;
-  font-family: "Joy Neon";
   cursor: pointer;
   text-shadow: 0.1vw 0vw 0.1vw rgba(216, 79, 191, 0.5),
     0.1vw 0vw 0.2vw rgba(0, 0, 0, 0.5), 0.1vw 0vw 0.1vw rgba(216, 79, 191, 0.5),
@@ -86,7 +83,6 @@ const TextPink = styled.h2`
 const TextBlue = styled.h2`
   color: #9ad9e3;
   cursor: pointer;
-  font-family: "Joy Neon";
   text-shadow: 0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
     0.1vw 0vw 0.2vw rgba(0, 0, 0, 0.5), 0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
     0.1vw 0vw 2vw rgba(63, 228, 206, 0.5), 0.4vw 0vw 5vw rgba(61, 189, 172, 0.5),

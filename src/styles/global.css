@@ -2,11 +2,27 @@
 
 body {
   margin: 0;
-  font-family: Lato;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
   background-color: black;
   width: 100vw;
 }
 
 html {
   width: 100vw;
+}
+
+h1 {
+  font-family: "Joy Neon Hollow", sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Joy Neon", sans-serif;
+  font-weight: normal;
+}
+
+button {
+  font-family: "Joy Neon", sans-serif;
+  font-weight: normal;
 }

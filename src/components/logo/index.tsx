@@ -1,14 +1,7 @@
 import styled, { keyframes } from "styled-components"
 
+import Img from "gatsby-image"
 import React from "react"
-import arrowdowner from "./images/alempi.png"
-import arrowupper from "./images/ylempi.png"
-import downerglow from "./images/alempitaustaglow.png"
-import luuppi from "./images/luuppi.png"
-import luuppiglow from "./images/luuppitaustaglow.png"
-import puolue from "./images/puolue.png"
-import puolueglow from "./images/puoluetaustaglow.png"
-import upperglow from "./images/ylempitaustaglow.png"
 
 const flicker = keyframes`
     0% {
@@ -62,13 +55,17 @@ const LogoContainer = styled.div`
   }
 `
 
-const NeonSignText = styled.img`
+const NeonSignText = styled(Img)`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
 `
 
-const Backglow = styled.img`
+const Backglow = styled(Img)`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   mix-blend-mode: soft-light;
   opacity: 80%;
@@ -82,20 +79,29 @@ const FlickerArrowU = styled(NeonSignText)`
   animation: ${flicker} 5s infinite 3s step-end;
 `
 
-export default function Logo() {
+export default function Logo({
+  arrowupper,
+  upperglow,
+  downerglow,
+  arrowdowner,
+  puolueglow,
+  puolue,
+  luuppi,
+  luuppiglow,
+}) {
   return (
     <LogoContainer>
-      <Backglow src={upperglow} alt="" />
-      <FlickerArrowU src={arrowupper} alt="" />
+      <Backglow fluid={upperglow} alt="" />
+      <FlickerArrowU fluid={arrowupper} alt="" />
 
-      <Backglow src={downerglow} alt="" />
-      <FlickerArrowD src={arrowdowner} alt="" />
+      <Backglow fluid={downerglow} alt="" />
+      <FlickerArrowD fluid={arrowdowner} alt="" />
 
-      <Backglow src={puolueglow} alt="" />
-      <NeonSignText src={puolue} alt="" />
+      <Backglow fluid={puolueglow} alt="" />
+      <NeonSignText fluid={puolue} alt="" />
 
-      <Backglow src={luuppiglow} alt="" />
-      <NeonSignText src={luuppi} alt="" />
+      <Backglow fluid={luuppiglow} alt="" />
+      <NeonSignText fluid={luuppi} alt="" />
     </LogoContainer>
   )
 }

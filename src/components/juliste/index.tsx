@@ -1,3 +1,4 @@
+import Img from "gatsby-image"
 import React from "react"
 import jere from "./images/jere.jpg"
 import loviisa from "./images/loviisa.jpg"
@@ -12,8 +13,7 @@ type personType = {
 }
 
 const Container = styled.div`
-  width: 65vw;
-  margin: 5rem auto;
+  margin: 5rem 0;
   font-weight: 300;
   font-size: 1.3rem;
   color: white;

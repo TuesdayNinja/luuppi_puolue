@@ -1,9 +1,9 @@
 import { Close, Menu } from "@styled-icons/evaicons-solid/"
 import React, { useState } from "react"
 
+import Img from "gatsby-image"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import styled from "styled-components"
-import tekija from "./images/tekija_logo.png"
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
   }
 `
 
-const Tekija = styled.img`
+const Tekija = styled(Img)`
   width: 10vw;
   height: 9vw;
   display: block;
@@ -34,7 +34,6 @@ const Button = styled.button`
   -moz-appearance: none;
   outline: none;
   color: white;
-  font-family: Joy Neon;
   font-size: 1.6rem;
   margin-left: 50px;
   @media (max-width: 750px) {
@@ -77,7 +76,7 @@ const MobileMenuModal = styled.div`
   flex-direction: column;
 `
 
-export default function Header() {
+export default function Header({ tekija }) {
   const [menuOpen, setMenuOpen] = useState(false)
   return menuOpen ? (
     <MobileMenuModal>
@@ -87,7 +86,7 @@ export default function Header() {
     </MobileMenuModal>
   ) : (
     <HeaderContainer>
-      <Tekija src={tekija} alt="" />
+      <Tekija fluid={tekija} alt="Tekijä logo" />
       <MobileMenu>
         <StyledMenu height="3rem" onClick={() => setMenuOpen(true)} />
       </MobileMenu>
