@@ -24,7 +24,7 @@ const Link = styled.a`
 
 export default function Luuppi_Puolue() {
   return (
-    <Container>
+    <Container id="info">
       <p>
         Luuppi_Puolue on poliittisesti sitoutumaton edustajistoryhmä{" "}
         <Link

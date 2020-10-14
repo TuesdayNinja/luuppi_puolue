@@ -80,7 +80,7 @@ export default function Vaalit() {
   }
 
   return (
-    <Container>
+    <Container id="vaalit">
       <Headline>Edustajistovaalit 2020</Headline>
       <TextBlue onClick={() => handleThemeClick(0)}>
         Yhtenäisempi ja yhdenvertaisempi ylioppilaskunta 2020

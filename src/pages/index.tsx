@@ -20,7 +20,7 @@ const Background = styled.div`
 export default function Home() {
   return (
     <Background>
-      <Header />
+      <Header></Header>
       <Logo />
       <Luuppi_puolue />
       <Vaalit />
