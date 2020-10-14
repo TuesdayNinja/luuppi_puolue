@@ -17,13 +17,19 @@ const Background = styled.div`
   overflow: scroll;
 `
 
+const Padding = styled.div`
+  margin: 0 17vw 10vw 17vw;
+`
+
 export default function Home() {
   return (
     <Background>
       <Header></Header>
       <Logo />
-      <Luuppi_puolue />
-      <Vaalit />
+      <Padding>
+        <Luuppi_puolue />
+        <Vaalit />
+      </Padding>
     </Background>
   )
 }
