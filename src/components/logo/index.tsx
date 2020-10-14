@@ -46,8 +46,20 @@ const LogoContainer = styled.div`
   position: relative;
   margin: 0 auto;
   width: 60vw;
-  height: 100%;
+  height: 60vw;
   margin-top: -4rem;
+  @media (max-width: 900px) {
+    width: 65vw;
+    height: 65vw;
+  }
+  @media (max-width: 750px) {
+    width: 80vw;
+    height: 80vw;
+  }
+  @media (max-width: 600px) {
+    width: 100vw;
+    height: 100vw;
+  }
 `
 
 const NeonSignText = styled.img`

@@ -1,5 +1,4 @@
 import React from "react"
-import metal from "./images/metal.png"
 import styled from "styled-components"
 
 const Container = styled.div`

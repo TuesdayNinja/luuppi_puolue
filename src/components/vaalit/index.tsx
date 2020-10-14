@@ -1,7 +1,6 @@
+import { ArrowIosDownward, ArrowIosUpward } from "@styled-icons/evaicons-solid/"
 import React, { useState } from "react"
 
-import ArrowIosDownward from "@styled-icons/evaicons-solid/ArrowIosDownward"
-import ArrowIosUpward from "@styled-icons/evaicons-solid/ArrowIosUpward"
 import { Collapse } from "react-collapse"
 import Juliste from "../juliste"
 import styled from "styled-components"
@@ -17,6 +16,7 @@ const Container = styled.div`
 `
 
 const ThemeContainer = styled(Container)`
+  width: 65vw;
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
