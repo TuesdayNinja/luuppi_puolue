@@ -19,6 +19,12 @@ const Background = styled.div`
 
 const Padding = styled.div`
   margin: 0 17vw 10vw 17vw;
+  @media (max-width: 600px) {
+    margin: 0 12vw 10vw 12vw;
+  }
+  @media (max-width: 470px) {
+    margin: 0 8vw 8vw 8vw;
+  }
 `
 
 export default function Home() {

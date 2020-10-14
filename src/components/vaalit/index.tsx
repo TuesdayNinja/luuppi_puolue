@@ -20,6 +20,19 @@ const ThemeContainer = styled(Container)`
   }
 `
 
+const ArrowDownBlue = styled(ArrowIosDownward)`
+  color: #9ad9e3;
+`
+const ArrowDownPink = styled(ArrowIosDownward)`
+  color: #f49bc2;
+`
+const ArrowUpBlue = styled(ArrowIosUpward)`
+  color: #9ad9e3;
+`
+const ArrowUpPink = styled(ArrowIosUpward)`
+  color: #f49bc2;
+`
+
 const Headline = styled.h1`
   color: #e8fffc;
   font-family: "Joy Neon Hollow";
@@ -65,15 +78,6 @@ const TextPink = styled.h2`
     0.1vw 0vw 0.2vw rgba(0, 0, 0, 0.5), 0.1vw 0vw 0.1vw rgba(216, 79, 191, 0.5),
     0.1vw 0vw 2vw rgba(216, 79, 191, 0.5), 0.4vw 0vw 5vw rgba(172, 68, 153, 0.5),
     0.1vw 0vw 5vw rgba(172, 68, 153, 0.5);
-  &:hover {
-    color: #9ad9e3;
-    text-shadow: 0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
-      0.1vw 0vw 0.2vw rgba(0, 0, 0, 0.5),
-      0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
-      0.1vw 0vw 2vw rgba(63, 228, 206, 0.5),
-      0.4vw 0vw 5vw rgba(61, 189, 172, 0.5),
-      0.1vw 0vw 5vw rgba(61, 189, 172, 0.5);
-  }
   @media (max-width: 480px) {
     font-size: 1.5rem;
   }
@@ -87,7 +91,23 @@ const TextBlue = styled.h2`
     0.1vw 0vw 0.2vw rgba(0, 0, 0, 0.5), 0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
     0.1vw 0vw 2vw rgba(63, 228, 206, 0.5), 0.4vw 0vw 5vw rgba(61, 189, 172, 0.5),
     0.1vw 0vw 5vw rgba(61, 189, 172, 0.5);
-  &:hover {
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+`
+
+const ThemeHeadlineContainerBlue = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  &:hover ${ArrowDownBlue} {
+    color: #f49bc2;
+  }
+  &:hover ${ArrowUpBlue} {
+    color: #f49bc2;
+  }
+  &:hover ${TextBlue} {
     color: #f49bc2;
     text-shadow: 0.1vw 0vw 0.1vw rgba(216, 79, 191, 0.5),
       0.1vw 0vw 0.2vw rgba(0, 0, 0, 0.5),
@@ -96,8 +116,27 @@ const TextBlue = styled.h2`
       0.4vw 0vw 5vw rgba(172, 68, 153, 0.5),
       0.1vw 0vw 5vw rgba(172, 68, 153, 0.5);
   }
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
+`
+
+const ThemeHeadlineContainerPink = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  &:hover ${ArrowDownPink} {
+    color: #9ad9e3;
+  }
+  &:hover ${ArrowUpPink} {
+    color: #9ad9e3;
+  }
+  &:hover ${TextPink} {
+    color: #9ad9e3;
+    text-shadow: 0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
+      0.1vw 0vw 0.2vw rgba(0, 0, 0, 0.5),
+      0.1vw 0vw 0.1vw rgba(63, 228, 206, 0.5),
+      0.1vw 0vw 2vw rgba(63, 228, 206, 0.5),
+      0.4vw 0vw 5vw rgba(61, 189, 172, 0.5),
+      0.1vw 0vw 5vw rgba(61, 189, 172, 0.5);
   }
 `
 
@@ -118,9 +157,16 @@ export default function Vaalit() {
         <br />
         vaalit 2020
       </HeadlineMobile>
-      <TextBlue onClick={() => handleThemeClick(0)}>
-        Yhtenäisempi ja yhdenvertaisempi ylioppilaskunta 2020
-      </TextBlue>
+      <ThemeHeadlineContainerBlue onClick={() => handleThemeClick(0)}>
+        <TextBlue>
+          Yhtenäisempi ja yhdenvertaisempi ylioppilaskunta 2020
+        </TextBlue>
+        {themeShown[0] ? (
+          <ArrowUpBlue height="3rem" />
+        ) : (
+          <ArrowDownBlue height="3rem" />
+        )}
+      </ThemeHeadlineContainerBlue>
       <Collapse isOpened={themeShown[0]}>
         <ThemeContainer>
           Luuppi_Puolueelle on tärkeää, että kaikki kokevat olonsa turvalliseksi
@@ -131,9 +177,14 @@ export default function Vaalit() {
           tehokkaammin yhteen.
         </ThemeContainer>
       </Collapse>
-      <TextPink onClick={() => handleThemeClick(1)}>
-        Opiskelijalähtöisempää tilapolitiikkaa
-      </TextPink>
+      <ThemeHeadlineContainerPink onClick={() => handleThemeClick(1)}>
+        <TextPink>Opiskelijalähtöisempää tilapolitiikkaa</TextPink>
+        {themeShown[1] ? (
+          <ArrowUpPink height="3rem" />
+        ) : (
+          <ArrowDownPink height="3rem" />
+        )}
+      </ThemeHeadlineContainerPink>
       <Collapse isOpened={themeShown[1]}>
         <ThemeContainer>
           Keskusta kampuksen tilapolitiikka on historiallisesti ollut melko
@@ -143,9 +194,14 @@ export default function Vaalit() {
           käyttöön.
         </ThemeContainer>
       </Collapse>
-      <TextBlue onClick={() => handleThemeClick(2)}>
-        Järjestöt ylioppilaskunnan keskiöön
-      </TextBlue>
+      <ThemeHeadlineContainerBlue onClick={() => handleThemeClick(2)}>
+        <TextBlue>Järjestöt ylioppilaskunnan keskiöön</TextBlue>
+        {themeShown[2] ? (
+          <ArrowUpBlue height="3rem" />
+        ) : (
+          <ArrowDownBlue height="3rem" />
+        )}
+      </ThemeHeadlineContainerBlue>
       <Collapse isOpened={themeShown[2]}>
         <ThemeContainer>
           Ainejärjestöt, killat ja harrastejärjestöt ovat ylioppilaskuntaa
