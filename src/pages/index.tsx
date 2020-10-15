@@ -13,7 +13,6 @@ const Background = styled(BackgroundImage)`
   background-attachment: fixed;
   overflow: scroll;
   background-size: cover;
-  width: 100vw;
   height: 100vh;
 `
 
