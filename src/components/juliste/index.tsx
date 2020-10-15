@@ -1,16 +1,9 @@
+import { graphql, useStaticQuery } from "gatsby"
+
 import Img from "gatsby-image"
 import React from "react"
-import jere from "./images/jere.jpg"
-import loviisa from "./images/loviisa.jpg"
-import mirva from "./images/mirva.jpg"
-import paavo from "./images/paavo.jpg"
 import people from "./people.json"
-import random from "./images/random.png"
 import styled from "styled-components"
-
-type personType = {
-  person: { number: number; name: string; quote: string; image: string }
-}
 
 const Container = styled.div`
   margin: 5rem 0;
@@ -31,7 +24,7 @@ const CardContainer = styled.div`
   padding: 30px;
 `
 
-const Image = styled.img`
+const Image = styled(Img)`
   width: 190px;
   height: auto;
 `
@@ -45,27 +38,44 @@ const Quote = styled.p`
   font-size: 0.9rem;
 `
 
-function Card(person: personType) {
-  console.log(person.person.image)
-  return (
-    <CardContainer>
-      <Image src={random} alt="" />
-      <Name>{person.person.name}</Name>
-      <Quote>{person.person.quote}</Quote>
-    </CardContainer>
-  )
-}
-
-function Cards() {
+function Cards({ data }) {
   return people.map(person => {
-    return <Card key={person.number} person={person} />
+    const img = data.peopleImages.edges.find(
+      imageperson => imageperson.node.relativePath === person.image
+    )
+    console.log(img)
+    return (
+      <CardContainer>
+        {img ? <Image fluid={img.node.childImageSharp.fluid} /> : <div></div>}
+
+        <Name>{person.name}</Name>
+        <Quote>{person.quote}</Quote>
+      </CardContainer>
+    )
   })
 }
 
 export default function Luuppi_Puolue() {
+  const peopledata = useStaticQuery(graphql`
+    query {
+      peopleImages: allFile(filter: { sourceInstanceName: { eq: "people" } }) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Container>
-      <Cards />
+      <Cards data={peopledata} />
     </Container>
   )
 }

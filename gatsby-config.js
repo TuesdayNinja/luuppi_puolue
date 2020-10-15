@@ -19,10 +19,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `people`,
+        path: `${process.cwd()}/src/images/people`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${process.cwd()}/src/images`,
+      },
+    },
+
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
