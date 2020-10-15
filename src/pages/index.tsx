@@ -9,14 +9,28 @@ import Luuppi_puolue from "../components/luuppi_puolue"
 import React from "react"
 import Vaalit from "../components/vaalit"
 import styled from "styled-components"
+import tiilitausta from "../images/tiilitausta_pienempi.png"
 
 require("../fonts/fonts.css")
 
 const Background = styled(BackgroundImage)`
-  background-attachment: fixed;
+  background-attachment: scroll;
   overflow: scroll;
+  background-repeat: repeat-y;
+  @media (min-width: 1500px) {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+`
+
+const OldBackground = styled.div`
+  position: fixed;
   background-size: cover;
   width: 100vw;
+  height: 100vh;
+  background-image: url(${tiilitausta});
+  overflow: scroll;
 `
 
 const Padding = styled.div`
@@ -32,17 +46,14 @@ const Padding = styled.div`
 export default function Home({ data }) {
   console.log(data)
   return data.tiilitaustaGatsby ? (
-    <Background
-      Tag="section"
-      fluid={data.tiilitaustaGatsby.childImageSharp.fluid}
-    >
+    <OldBackground>
       <Header tekija={data.tekija.childImageSharp.fluid}></Header>
       <Logo />
       <Padding>
         <Luuppi_puolue />
         <Vaalit />
       </Padding>
-    </Background>
+    </OldBackground>
   ) : (
     <div></div>
   )
