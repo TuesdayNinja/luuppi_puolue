@@ -61,7 +61,7 @@ function Cards({ peopledata }) {
     )
 
     return (
-      <CardContainer>
+      <CardContainer key={person.number}>
         <NumberWrapper>
           {number ? (
             <Number fluid={number.node.childImageSharp.fluid} />

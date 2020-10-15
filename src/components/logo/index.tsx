@@ -64,6 +64,9 @@ const NeonSignText = styled(Img)`
 const Backglow = styled(Img)`
   position: absolute;
   width: 100%;
+  mix-blend-mode: soft-light;
+  opacity: 70%;
+  will-change: opacity;
 `
 
 const FlickerArrowD = styled(NeonSignText)`
@@ -77,14 +80,15 @@ const ImageContainer = styled.div`
   width: 60vw;
   height: auto;
   position: absolute;
-`
-
-const GlowImageContainer = styled.div`
-  width: 60vw;
-  height: auto;
-  position: absolute;
-  mix-blend-mode: soft-light;
-  opacity: 80%;
+  @media (max-width: 900px) {
+    width: 65vw;
+  }
+  @media (max-width: 750px) {
+    width: 80vw;
+  }
+  @media (max-width: 600px) {
+    width: 100vw;
+  }
 `
 
 export default function Logo() {
@@ -110,12 +114,12 @@ export default function Logo() {
   return (
     <LogoContainer>
       <div></div>
-      <GlowImageContainer>
+      <ImageContainer>
         <Backglow
           fluid={logoparts.logoparts.edges[7].node.childImageSharp.fluid}
           alt=""
         />
-      </GlowImageContainer>
+      </ImageContainer>
       <ImageContainer>
         <FlickerArrowU
           fluid={logoparts.logoparts.edges[4].node.childImageSharp.fluid}
@@ -123,12 +127,12 @@ export default function Logo() {
         />
       </ImageContainer>
 
-      <GlowImageContainer>
+      <ImageContainer>
         <Backglow
           fluid={logoparts.logoparts.edges[6].node.childImageSharp.fluid}
           alt=""
         />
-      </GlowImageContainer>
+      </ImageContainer>
       <ImageContainer>
         <FlickerArrowD
           fluid={logoparts.logoparts.edges[5].node.childImageSharp.fluid}
@@ -136,12 +140,12 @@ export default function Logo() {
         />
       </ImageContainer>
 
-      <GlowImageContainer>
+      <ImageContainer>
         <Backglow
           fluid={logoparts.logoparts.edges[2].node.childImageSharp.fluid}
           alt=""
         />
-      </GlowImageContainer>
+      </ImageContainer>
       <ImageContainer>
         <NeonSignText
           fluid={logoparts.logoparts.edges[3].node.childImageSharp.fluid}
@@ -149,12 +153,12 @@ export default function Logo() {
         />
       </ImageContainer>
 
-      <GlowImageContainer>
+      <ImageContainer>
         <Backglow
           fluid={logoparts.logoparts.edges[1].node.childImageSharp.fluid}
           alt=""
         />
-      </GlowImageContainer>
+      </ImageContainer>
       <ImageContainer>
         <NeonSignText
           fluid={logoparts.logoparts.edges[0].node.childImageSharp.fluid}

@@ -8,12 +8,10 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: "gatsby-source-filesystem",
       options: {
-        custom: {
-          families: ["Joy Neon", "Joy Neon Hollow", "Joy Neon Script"],
-          urls: ["/fonts/fonts.css"],
-        },
+        name: "fonts",
+        path: `${process.cwd()}/src/fonts/`,
       },
     },
     {
