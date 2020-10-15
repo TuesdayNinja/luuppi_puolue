@@ -1,22 +1,13 @@
 @font-face {
   font-family: "Joy Neon";
-  src: url("JoyNeon.woff2") format("woff2"), url("JoyNeon.woff") format("woff");
+  src: url("JoyNeon.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Joy Neon Hollow";
-  src: url("JoyNeonHollow.woff2") format("woff2"),
-    url("JoyNeonHollow.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Joy Neon Script";
-  src: url("JoyNeonScript.woff2") format("woff2"),
-    url("JoyNeonScript.woff") format("woff");
+  src: url("JoyNeonHollow.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

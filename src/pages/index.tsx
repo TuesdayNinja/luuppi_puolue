@@ -10,6 +10,8 @@ import React from "react"
 import Vaalit from "../components/vaalit"
 import styled from "styled-components"
 
+require("../fonts/fonts.css")
+
 const Background = styled(BackgroundImage)`
   background-attachment: fixed;
   overflow: scroll;
