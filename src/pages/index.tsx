@@ -14,6 +14,7 @@ const Background = styled(BackgroundImage)`
   background-attachment: fixed;
   overflow: scroll;
   background-size: cover;
+  width: 100vw;
 `
 
 const Padding = styled.div`
