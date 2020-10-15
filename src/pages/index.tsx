@@ -1,13 +1,12 @@
 import "../styles/global.css"
 
-import { graphql, withPrefix } from "gatsby"
-
 import BackgroundImage from "gatsby-background-image"
 import Header from "../components/header"
 import Logo from "../components/logo"
 import Luuppi_puolue from "../components/luuppi_puolue"
 import React from "react"
 import Vaalit from "../components/vaalit"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
 const Background = styled(BackgroundImage)`
@@ -15,6 +14,7 @@ const Background = styled(BackgroundImage)`
   overflow: scroll;
   background-size: cover;
   width: 100vw;
+  height: 100vh;
 `
 
 const Padding = styled.div`
