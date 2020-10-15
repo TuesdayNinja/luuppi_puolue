@@ -12,6 +12,7 @@ const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
   align-items: center;
+  z-index: 10000;
   @media (max-width: 750px) {
     flex-direction: row-reverse;
   }

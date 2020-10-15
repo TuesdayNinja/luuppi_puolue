@@ -8,8 +8,10 @@ import React from "react"
 import Vaalit from "../components/vaalit"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import tiilitausta from "./tiilitausta_pienempi.png"
 
-const Background = styled(BackgroundImage)`
+const Background = styled.div`
+  background-image: url(${tiilitausta});
   background-attachment: fixed;
   overflow: scroll;
   background-size: cover;
@@ -47,13 +49,6 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    tiilitaustaGatsby: file(relativePath: { eq: "tiilitausta_pienempi.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     tekija: file(relativePath: { eq: "tekija_logo.png" }) {
       childImageSharp {
         fluid(maxWidth: 100) {
