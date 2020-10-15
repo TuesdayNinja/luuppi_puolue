@@ -1,17 +1,19 @@
 import "../styles/global.css"
 
+import { graphql, withPrefix } from "gatsby"
+
 import BackgroundImage from "gatsby-background-image"
 import Header from "../components/header"
 import Logo from "../components/logo"
 import Luuppi_puolue from "../components/luuppi_puolue"
 import React from "react"
 import Vaalit from "../components/vaalit"
-import { graphql } from "gatsby"
 import styled from "styled-components"
 
 const Background = styled(BackgroundImage)`
   background-attachment: fixed;
   overflow: scroll;
+  background-size: cover;
 `
 
 const Padding = styled.div`
@@ -47,7 +49,7 @@ export const query = graphql`
   query {
     tiilitaustaGatsby: file(relativePath: { eq: "tiilitausta_pienempi.png" }) {
       childImageSharp {
-        fluid(maxWidth: 2000, fit: COVER) {
+        fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }

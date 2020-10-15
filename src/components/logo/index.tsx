@@ -109,61 +109,67 @@ export default function Logo() {
     }
   `)
 
-  console.log(logoparts)
+  const arrowU = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "ylempi.png"
+  )
+
+  const arrowUGlow = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "ylempitaustaglow.png"
+  )
+
+  const arrowDGlow = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "alempitaustaglow.png"
+  )
+
+  const arrowD = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "alempi.png"
+  )
+
+  const luuppi = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "luuppi.png"
+  )
+
+  const luuppiGlow = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "luuppitaustaglow.png"
+  )
+
+  const puolueGlow = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "puoluetaustaglow.png"
+  )
+
+  const puolue = logoparts.logoparts.edges.find(
+    part => part.node.relativePath === "puolue.png"
+  )
 
   return (
     <LogoContainer>
       <div></div>
       <ImageContainer>
-        <Backglow
-          fluid={logoparts.logoparts.edges[7].node.childImageSharp.fluid}
-          alt=""
-        />
+        <Backglow fluid={arrowUGlow.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
       <ImageContainer>
-        <FlickerArrowU
-          fluid={logoparts.logoparts.edges[4].node.childImageSharp.fluid}
-          alt=""
-        />
+        <FlickerArrowU fluid={arrowU.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
       <ImageContainer>
-        <Backglow
-          fluid={logoparts.logoparts.edges[6].node.childImageSharp.fluid}
-          alt=""
-        />
+        <Backglow fluid={arrowDGlow.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
       <ImageContainer>
-        <FlickerArrowD
-          fluid={logoparts.logoparts.edges[5].node.childImageSharp.fluid}
-          alt=""
-        />
+        <FlickerArrowD fluid={arrowD.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
       <ImageContainer>
-        <Backglow
-          fluid={logoparts.logoparts.edges[2].node.childImageSharp.fluid}
-          alt=""
-        />
+        <Backglow fluid={luuppiGlow.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
       <ImageContainer>
-        <NeonSignText
-          fluid={logoparts.logoparts.edges[3].node.childImageSharp.fluid}
-          alt=""
-        />
+        <NeonSignText fluid={luuppi.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
       <ImageContainer>
-        <Backglow
-          fluid={logoparts.logoparts.edges[1].node.childImageSharp.fluid}
-          alt=""
-        />
+        <Backglow fluid={puolueGlow.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
       <ImageContainer>
-        <NeonSignText
-          fluid={logoparts.logoparts.edges[0].node.childImageSharp.fluid}
-          alt=""
-        />
+        <NeonSignText fluid={puolue.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
     </LogoContainer>
   )
