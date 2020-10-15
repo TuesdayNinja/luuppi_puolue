@@ -20,7 +20,7 @@ const CardContainer = styled.div`
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 190px;
-  height: 325px;
+  height: 330px;
   padding: 30px;
   position: relative;
 `
@@ -43,11 +43,18 @@ const NumberWrapper = styled.div`
 
 const Name = styled.h3`
   font-weight: 300;
-  margin: 5px 0;
+  margin: 5px 0 0 0;
   font-size: 1.4rem;
 `
+const Major = styled.p`
+  margin: 2px 0 5px 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+`
+
 const Quote = styled.p`
   margin: 0;
+  opacity: 90%;
   font-size: 0.9rem;
 `
 
@@ -72,6 +79,7 @@ function Cards({ peopledata }) {
         {img ? <Image fluid={img.node.childImageSharp.fluid} /> : <div></div>}
 
         <Name>{person.name}</Name>
+        <Major>{person.major}</Major>
         <Quote>{person.quote}</Quote>
       </CardContainer>
     )

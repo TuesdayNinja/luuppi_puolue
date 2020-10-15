@@ -2,120 +2,140 @@
   {
     "number": 119,
     "name": "Paavo Keski-Orvola",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "Silloin kun tehdään niin tehdään kunnolla.",
     "image": "paavo.jpg"
   },
   {
     "number": 120,
     "name": "Mirva Pekkola",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "mirva.jpg"
   },
   {
     "number": 121,
     "name": "Loviisa Hurme",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "Tilastoja, faktoja ja analyysejä päätöksentekoon.",
     "image": "loviisa.jpg"
   },
   {
     "number": 122,
     "name": "Lilja Jere",
+    "major": "MTT",
     "quote": "Luupinkiilto silmissä edariin.",
     "image": "jere.jpg"
   },
   {
     "number": 123,
     "name": "Riina Harjuniemi",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "riina.jpg"
   },
   {
     "number": 124,
     "name": "Aaro Huttunen",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "aaro.jpg"
   },
   {
     "number": 125,
     "name": "Jesse Heinonen",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "jecce.jpg"
   },
   {
     "number": 126,
     "name": "Juulia Kärki",
+    "major": "Tilastotiede",
     "quote": "",
     "image": "juulia.jpg"
   },
   {
     "number": 127,
     "name": "Veeti Ahvonen",
+    "major": "Matematiikka",
     "quote": "Tehdään päätöksenteosta yhtä selkeää kuin matematiikka.",
     "image": "veeti.jpg"
   },
   {
     "number": 128,
     "name": "Thomas Mikkonen",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "Ei huonoin valinta.",
     "image": "thomas.jpg"
   },
   {
     "number": 129,
     "name": "Petteri Sällström",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "petteri.jpg"
   },
   {
     "number": 130,
     "name": "Jesse Sydänmäki",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "Tieteen puolesta, fiktiota vastaan",
     "image": "jesse.jpg"
   },
   {
     "number": 131,
     "name": "Miia Pynnönen",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
-    "image": "random.png"
+    "image": "miia.jpg"
   },
   {
     "number": 132,
     "name": "Oskari Kuikka",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "oskari.jpg"
   },
   {
     "number": 133,
     "name": "Joel Sallinen",
+    "major": "Human Technology Interaction",
     "quote": "",
     "image": "random.png"
   },
   {
     "number": 134,
     "name": "Lassi Halminen",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "Et saa sitä mitä haluat, mutta et myöskään sitä mitä pelkäät.",
     "image": "lassi.jpg"
   },
   {
     "number": 135,
     "name": "Jonna Paksunen",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "jonna.jpg"
   },
   {
     "number": 136,
     "name": "Elsa Jalasjoki",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "random.png"
   },
   {
     "number": 137,
     "name": "Daniel Macphee",
+    "major": "Matematiikka",
     "quote": "",
     "image": "random.png"
   },
   {
     "number": 138,
     "name": "Marika Timperi",
+    "major": "Tietojenkäsittelytieteet",
     "quote": "",
     "image": "marika.jpg"
   }
