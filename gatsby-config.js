@@ -19,6 +19,21 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `numbers`,
+        path: `${process.cwd()}/src/images/numbers`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logoparts`,
+        path: `${process.cwd()}/src/images/logoparts`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `people`,
         path: `${process.cwd()}/src/images/people`,
       },

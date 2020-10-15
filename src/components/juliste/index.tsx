@@ -22,12 +22,25 @@ const CardContainer = styled.div`
   width: 190px;
   height: 325px;
   padding: 30px;
+  position: relative;
 `
 
 const Image = styled(Img)`
   width: 190px;
   height: auto;
 `
+const Number = styled(Img)`
+  width: 65px;
+  height: auto;
+  position: absolute;
+`
+const NumberWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+`
+
 const Name = styled.h3`
   font-weight: 300;
   margin: 5px 0;
@@ -38,14 +51,24 @@ const Quote = styled.p`
   font-size: 0.9rem;
 `
 
-function Cards({ data }) {
+function Cards({ peopledata }) {
   return people.map(person => {
-    const img = data.peopleImages.edges.find(
+    const img = peopledata.peopleImages.edges.find(
       imageperson => imageperson.node.relativePath === person.image
     )
-    console.log(img)
+    const number = peopledata.numbers.edges.find(
+      imageperson => imageperson.node.relativePath === `${person.number}.png`
+    )
+
     return (
       <CardContainer>
+        <NumberWrapper>
+          {number ? (
+            <Number fluid={number.node.childImageSharp.fluid} />
+          ) : (
+            <div></div>
+          )}
+        </NumberWrapper>
         {img ? <Image fluid={img.node.childImageSharp.fluid} /> : <div></div>}
 
         <Name>{person.name}</Name>
@@ -63,7 +86,19 @@ export default function Luuppi_Puolue() {
           node {
             relativePath
             childImageSharp {
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 200) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+      numbers: allFile(filter: { sourceInstanceName: { eq: "numbers" } }) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 65) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -75,7 +110,7 @@ export default function Luuppi_Puolue() {
 
   return (
     <Container>
-      <Cards data={peopledata} />
+      <Cards peopledata={peopledata} />
     </Container>
   )
 }

@@ -47,7 +47,7 @@ export const query = graphql`
   query {
     tiilitaustaGatsby: file(relativePath: { eq: "tiilitausta_pienempi.png" }) {
       childImageSharp {
-        fluid(fit: COVER, maxWidth: 2000) {
+        fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }

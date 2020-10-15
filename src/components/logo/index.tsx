@@ -1,14 +1,8 @@
+import { graphql, useStaticQuery } from "gatsby"
 import styled, { keyframes } from "styled-components"
 
+import Img from "gatsby-image"
 import React from "react"
-import arrowdowner from "./images/alempi.png"
-import arrowupper from "./images/ylempi.png"
-import downerglow from "./images/alempitaustaglow.png"
-import luuppi from "./images/luuppi.png"
-import luuppiglow from "./images/luuppitaustaglow.png"
-import puolue from "./images/puolue.png"
-import puolueglow from "./images/puoluetaustaglow.png"
-import upperglow from "./images/ylempitaustaglow.png"
 
 const flicker = keyframes`
     0% {
@@ -62,16 +56,14 @@ const LogoContainer = styled.div`
   }
 `
 
-const NeonSignText = styled.img`
+const NeonSignText = styled(Img)`
   position: absolute;
   width: 100%;
 `
 
-const Backglow = styled.img`
+const Backglow = styled(Img)`
   position: absolute;
   width: 100%;
-  mix-blend-mode: soft-light;
-  opacity: 80%;
 `
 
 const FlickerArrowD = styled(NeonSignText)`
@@ -81,21 +73,94 @@ const FlickerArrowD = styled(NeonSignText)`
 const FlickerArrowU = styled(NeonSignText)`
   animation: ${flicker} 5s infinite 3s step-end;
 `
+const ImageContainer = styled.div`
+  width: 60vw;
+  height: auto;
+  position: absolute;
+`
+
+const GlowImageContainer = styled.div`
+  width: 60vw;
+  height: auto;
+  position: absolute;
+  mix-blend-mode: soft-light;
+  opacity: 80%;
+`
 
 export default function Logo() {
+  const logoparts = useStaticQuery(graphql`
+    query {
+      logoparts: allFile(filter: { sourceInstanceName: { eq: "logoparts" } }) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(logoparts)
+
   return (
     <LogoContainer>
-      <Backglow src={upperglow} alt="" />
-      <FlickerArrowU src={arrowupper} alt="" />
+      <div></div>
+      <GlowImageContainer>
+        <Backglow
+          fluid={logoparts.logoparts.edges[7].node.childImageSharp.fluid}
+          alt=""
+        />
+      </GlowImageContainer>
+      <ImageContainer>
+        <FlickerArrowU
+          fluid={logoparts.logoparts.edges[4].node.childImageSharp.fluid}
+          alt=""
+        />
+      </ImageContainer>
 
-      <Backglow src={downerglow} alt="" />
-      <FlickerArrowD src={arrowdowner} alt="" />
+      <GlowImageContainer>
+        <Backglow
+          fluid={logoparts.logoparts.edges[6].node.childImageSharp.fluid}
+          alt=""
+        />
+      </GlowImageContainer>
+      <ImageContainer>
+        <FlickerArrowD
+          fluid={logoparts.logoparts.edges[5].node.childImageSharp.fluid}
+          alt=""
+        />
+      </ImageContainer>
 
-      <Backglow src={puolueglow} alt="" />
-      <NeonSignText src={puolue} alt="" />
+      <GlowImageContainer>
+        <Backglow
+          fluid={logoparts.logoparts.edges[2].node.childImageSharp.fluid}
+          alt=""
+        />
+      </GlowImageContainer>
+      <ImageContainer>
+        <NeonSignText
+          fluid={logoparts.logoparts.edges[3].node.childImageSharp.fluid}
+          alt=""
+        />
+      </ImageContainer>
 
-      <Backglow src={luuppiglow} alt="" />
-      <NeonSignText src={luuppi} alt="" />
+      <GlowImageContainer>
+        <Backglow
+          fluid={logoparts.logoparts.edges[1].node.childImageSharp.fluid}
+          alt=""
+        />
+      </GlowImageContainer>
+      <ImageContainer>
+        <NeonSignText
+          fluid={logoparts.logoparts.edges[0].node.childImageSharp.fluid}
+          alt=""
+        />
+      </ImageContainer>
     </LogoContainer>
   )
 }
