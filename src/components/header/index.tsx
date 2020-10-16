@@ -24,6 +24,15 @@ const Tekija = styled(Img)`
     display: none;
   }
 `
+const TekijaMobile = styled(Img)`
+  width: 36vw;
+  height: 30vw;
+  display: block;
+  @media (min-width: 751px) {
+    display: none;
+  }
+`
+
 const Button = styled.button`
   border: none;
   text-decoration: none;
@@ -83,6 +92,9 @@ export default function Header({ tekija }) {
       <StyledClose height="3rem" onClick={() => setMenuOpen(false)} />
       <Button onClick={() => scrollTo("#info")}>LUUPPI_PUOLUE</Button>
       <Button onClick={() => scrollTo("#vaalit")}>VAALIT 2020</Button>
+      <a href="https://www.instagram.com/tekijarengas/?hl=fi" target="_blank">
+        <TekijaMobile fluid={tekija} alt="Tekijä logo" />
+      </a>
     </MobileMenuModal>
   ) : (
     <HeaderContainer>
