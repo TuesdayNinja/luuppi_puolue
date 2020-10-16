@@ -52,7 +52,7 @@ export default function Home({ data }) {
   return data.tiilitaustaGatsby ? (
     <div>
       <Header tekija={data.tekija.childImageSharp.fluid}></Header>
-      <Background fluid={data.tiilitaustaGatsby.childImageSharp.fluid}>
+      <OldBackground>
         <div />
         <StyledLogo>
           <Logo />
@@ -61,7 +61,7 @@ export default function Home({ data }) {
           <Luuppi_puolue />
           <Vaalit />
         </Padding>
-      </Background>
+      </OldBackground>
     </div>
   ) : (
     <div></div>

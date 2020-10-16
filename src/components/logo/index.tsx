@@ -64,9 +64,6 @@ const NeonSignText = styled(Img)`
 const Backglow = styled(Img)`
   position: absolute;
   width: 100%;
-  mix-blend-mode: soft-light;
-  opacity: 70%;
-  will-change: opacity;
 `
 
 const FlickerArrowD = styled(NeonSignText)`
@@ -88,6 +85,18 @@ const ImageContainer = styled.div`
   }
   @media (max-width: 600px) {
     width: 100vw;
+  }
+`
+
+const GlowContainer = styled.div`
+  width: 60vw;
+  height: auto;
+  position: absolute;
+  mix-blend-mode: soft-light;
+  opacity: 70%;
+  will-change: opacity;
+  @media (max-width: 1030px) {
+    display: none;
   }
 `
 
@@ -144,30 +153,30 @@ export default function Logo() {
   return (
     <LogoContainer>
       <div></div>
-      <ImageContainer>
+      <GlowContainer>
         <Backglow fluid={arrowUGlow.node.childImageSharp.fluid} alt="" />
-      </ImageContainer>
+      </GlowContainer>
       <ImageContainer>
         <FlickerArrowU fluid={arrowU.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
-      <ImageContainer>
+      <GlowContainer>
         <Backglow fluid={arrowDGlow.node.childImageSharp.fluid} alt="" />
-      </ImageContainer>
+      </GlowContainer>
       <ImageContainer>
         <FlickerArrowD fluid={arrowD.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
-      <ImageContainer>
+      <GlowContainer>
         <Backglow fluid={luuppiGlow.node.childImageSharp.fluid} alt="" />
-      </ImageContainer>
+      </GlowContainer>
       <ImageContainer>
         <NeonSignText fluid={luuppi.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
-      <ImageContainer>
+      <GlowContainer>
         <Backglow fluid={puolueGlow.node.childImageSharp.fluid} alt="" />
-      </ImageContainer>
+      </GlowContainer>
       <ImageContainer>
         <NeonSignText fluid={puolue.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
