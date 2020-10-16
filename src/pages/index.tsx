@@ -18,6 +18,11 @@ const Background = styled(BackgroundImage)`
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
+  & > img {
+    object-fit: cover !important;
+    object-position: 0% 0% !important;
+    font-family: "object-fit: cover !important, object-position: 0% 0% !important";
+  }
 `
 
 const OldBackground = styled.div`
@@ -27,6 +32,9 @@ const OldBackground = styled.div`
   height: 100vh;
   background-image: url(${tiilitausta});
   overflow: scroll;
+`
+const StyledLogo = styled.div`
+  margin-top: 20vh;
 `
 
 const Padding = styled.div`
@@ -45,7 +53,10 @@ export default function Home({ data }) {
     <div>
       <Header tekija={data.tekija.childImageSharp.fluid}></Header>
       <Background fluid={data.tiilitaustaGatsby.childImageSharp.fluid}>
-        <Logo />
+        <div />
+        <StyledLogo>
+          <Logo />
+        </StyledLogo>
         <Padding>
           <Luuppi_puolue />
           <Vaalit />
