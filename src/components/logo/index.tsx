@@ -99,7 +99,7 @@ export default function Logo() {
           node {
             relativePath
             childImageSharp {
-              fluid(maxWidth: 500) {
+              fluid(maxWidth: 700) {
                 ...GatsbyImageSharpFluid
               }
             }

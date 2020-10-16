@@ -9,13 +9,11 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 3rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: calc(100vw - 6rem);
   align-items: center;
   z-index: 100000;
-  @media (max-width: 750px) {
-    flex-direction: row-reverse;
-  }
 `
 
 const Tekija = styled(Img)`
@@ -68,9 +66,10 @@ const MobileMenu = styled.div`
 `
 const MobileMenuModal = styled.div`
   background-color: black;
-  position: sticky;
+  position: fixed;
   align-items: flex-end;
   top: 0;
+  width: calc(100vw - 6rem);
   z-index: 100000;
   padding: 3rem;
   display: flex;
@@ -87,7 +86,9 @@ export default function Header({ tekija }) {
     </MobileMenuModal>
   ) : (
     <HeaderContainer>
-      <Tekija fluid={tekija} alt="Tekijä logo" />
+      <a href="https://www.instagram.com/tekijarengas/?hl=fi" target="_blank">
+        <Tekija fluid={tekija} alt="Tekijä logo" />
+      </a>
       <MobileMenu>
         <StyledMenu height="3rem" onClick={() => setMenuOpen(true)} />
       </MobileMenu>

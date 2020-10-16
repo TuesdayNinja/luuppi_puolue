@@ -14,14 +14,10 @@ import tiilitausta from "../images/tiilitausta_pienempi.png"
 require("../fonts/fonts.css")
 
 const Background = styled(BackgroundImage)`
-  background-attachment: scroll;
   overflow: scroll;
-  background-repeat: repeat-y;
-  @media (min-width: 1500px) {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
 `
 
 const OldBackground = styled.div`
@@ -46,14 +42,16 @@ const Padding = styled.div`
 export default function Home({ data }) {
   console.log(data)
   return data.tiilitaustaGatsby ? (
-    <OldBackground>
+    <div>
       <Header tekija={data.tekija.childImageSharp.fluid}></Header>
-      <Logo />
-      <Padding>
-        <Luuppi_puolue />
-        <Vaalit />
-      </Padding>
-    </OldBackground>
+      <Background fluid={data.tiilitaustaGatsby.childImageSharp.fluid}>
+        <Logo />
+        <Padding>
+          <Luuppi_puolue />
+          <Vaalit />
+        </Padding>
+      </Background>
+    </div>
   ) : (
     <div></div>
   )
@@ -70,7 +68,7 @@ export const query = graphql`
     }
     tekija: file(relativePath: { eq: "tekija_logo.png" }) {
       childImageSharp {
-        fluid(maxWidth: 100) {
+        fluid(maxWidth: 200) {
           ...GatsbyImageSharpFluid
         }
       }
