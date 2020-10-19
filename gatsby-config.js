@@ -43,7 +43,7 @@ module.exports = {
         path: `${process.cwd()}/src/images`,
       },
     },
-
+    `gatsby-plugin-preact`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
