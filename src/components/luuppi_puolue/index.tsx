@@ -38,12 +38,11 @@ export default function Luuppi_Puolue() {
           href="https://www.instagram.com/tekijarengas/?hl=fi"
           target="_blank"
         >
-          Tekijä
-        </Link>{" "}
-        vaalirenkaseen, joka koostuu pääsääntöisesti teknillisisten ja
-        samanhenkisten alojen vaaliliitoista. Luuppi_Puolueen ehdokkaita
-        yhdistää luuppilaisuus sekä halu ajaa järjestöjen etua ylioppilaskunnan
-        edustajistossa.
+          Tekijä-vaalirenkaseen
+        </Link>
+        , joka koostuu pääsääntöisesti teknillisisten ja samanhenkisten alojen
+        vaaliliitoista. Luuppi_Puolueen ehdokkaita yhdistää luuppilaisuus sekä
+        halu ajaa järjestöjen etua ylioppilaskunnan edustajistossa.
       </p>
     </Container>
   )

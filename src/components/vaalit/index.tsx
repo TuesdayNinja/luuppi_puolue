@@ -168,9 +168,9 @@ export default function Vaalit() {
           Luuppi_Puolueelle on tärkeää, että kaikki kokevat olonsa turvalliseksi
           ja mukavaksi Tampereen yliopistossa. Siksi meistä on tärkeää olla
           mukana luomassa yliopistoyhteisöä, jonka keskuuteen kaikki ovat
-          tervetulleita ja heidän hyvinvoinnista huolehditaan. Ylioppilaskunnan
-          tehtävänä on olla siltana eri kampusten välillä ja tuoda niitä
-          tehokkaammin yhteen.
+          tervetulleita ja jossa heidän hyvinvoinnista huolehditaan.
+          Ylioppilaskunnan tehtävänä on olla siltana eri kampusten välillä ja
+          tuoda niitä tehokkaammin yhteen.
         </ThemeContainer>
       </Collapse>
       <ThemeHeadlineContainerPink onClick={() => handleThemeClick(1)}>
@@ -184,8 +184,8 @@ export default function Vaalit() {
       <Collapse isOpened={themeShown[1]}>
         <ThemeContainer>
           Keskusta kampuksen tilapolitiikka on historiallisesti ollut melko
-          vastaista. Tämän vuoksi ylioppilaskunnan tulisi ajaa yliopisto
-          suuntaan, jossa myös keskusta kampuslaisille saataisiin paremmin
+          opiskelijavastaista. Tämän vuoksi ylioppilaskunnan tulisi ajaa
+          yliopisto suuntaan, jossa myös keskustakampukselle saataisiin paremmin
           opiskelutiloja ja parempia tiloja aine- ja harrastejärjestöjen
           käyttöön.
         </ThemeContainer>
@@ -203,7 +203,7 @@ export default function Vaalit() {
           Ainejärjestöt, killat ja harrastejärjestöt ovat ylioppilaskuntaa
           lähempänä opiskelijoita. Ne voivat järjestää monipuolista ja
           tehokkaasti järjestettävää toimintaa kaikille. Ainejärjestöt ja killat
-          vastaavat myös tehokkaasti omien alojensa edunvalvonta työstä. Tämän
+          vastaavat myös tehokkaasti omien alojensa edunvalvontatyöstä. Tämän
           vuoksi onkin hyvin keskeistä, että ylioppilaskunta osallistuu
           varmistamaan tätä toimintaa tukemalla järjestöjä.
         </ThemeContainer>
