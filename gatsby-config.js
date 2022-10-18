@@ -8,6 +8,15 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Luuppi_Puolue",
+        short_name: "Luuppi_Puolue",
+        start_url: "/",
+        icon: "src/images/lp.ico",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "fonts",
