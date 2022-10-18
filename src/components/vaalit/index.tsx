@@ -157,7 +157,7 @@ export default function Vaalit() {
       <HeadlineMobile>
         Edustajisto-
         <br />
-        vaalit 2020
+        vaalit 2022
       </HeadlineMobile>
       <ThemeHeadlineContainerBlue onClick={() => handleThemeClick(0)}>
         <TextBlue>
