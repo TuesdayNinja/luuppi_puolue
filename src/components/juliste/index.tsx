@@ -27,7 +27,7 @@ const CardContainer = styled.div`
 
 const Image = styled(Img)`
   width: 190px;
-  height: auto;
+  height: 250px;
 `
 const Number = styled(Img)`
   width: 65px;
@@ -44,7 +44,7 @@ const NumberWrapper = styled.div`
 const Name = styled.h3`
   font-weight: 300;
   margin: 5px 0 0 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 `
 const Major = styled.p`
   margin: 2px 0 5px 0;
