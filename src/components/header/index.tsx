@@ -123,7 +123,7 @@ export default function Header({ tekija }) {
     <MobileMenuModal>
       <StyledClose height="3rem" onClick={() => setMenuOpen(false)} />
       <Button onClick={() => handleMenuClick("#info")}>LUUPPI_PUOLUE</Button>
-      <Button onClick={() => handleMenuClick("#vaalit")}>VAALIT 2020</Button>
+      <Button onClick={() => handleMenuClick("#vaalit")}>VAALIT 2022</Button>
       <a href="https://trey.fi/edustajistovaalit/aanesta" target="_blank">
         <Aanesta>ÄÄNESTÄ</Aanesta>
       </a>
