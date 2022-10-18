@@ -8,15 +8,6 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "Luuppi_Puolue",
-        short_name: "Luuppi_Puolue",
-        start_url: "/",
-        icon: "src/images/lp.ico",
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "fonts",
@@ -54,7 +45,12 @@ module.exports = {
     },
     `gatsby-plugin-preact`,
     `gatsby-plugin-smoothscroll`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: "src/images/lp.ico",
+      },
+    },
     `gatsby-transformer-sharp`,
   ],
 }
