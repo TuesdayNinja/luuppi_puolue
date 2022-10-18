@@ -88,18 +88,6 @@ const ImageContainer = styled.div`
   }
 `
 
-const GlowContainer = styled.div`
-  width: 60vw;
-  height: auto;
-  position: absolute;
-  mix-blend-mode: soft-light;
-  opacity: 70%;
-  will-change: opacity;
-  @media (max-width: 1030px) {
-    display: none;
-  }
-`
-
 export default function Logo() {
   const logoparts = useStaticQuery(graphql`
     query {
@@ -122,14 +110,6 @@ export default function Logo() {
     part => part.node.relativePath === "ylempi.png"
   )
 
-  const arrowUGlow = logoparts.logoparts.edges.find(
-    part => part.node.relativePath === "ylempitaustaglow.png"
-  )
-
-  const arrowDGlow = logoparts.logoparts.edges.find(
-    part => part.node.relativePath === "alempitaustaglow.png"
-  )
-
   const arrowD = logoparts.logoparts.edges.find(
     part => part.node.relativePath === "alempi.png"
   )
@@ -138,45 +118,24 @@ export default function Logo() {
     part => part.node.relativePath === "luuppi.png"
   )
 
-  const luuppiGlow = logoparts.logoparts.edges.find(
-    part => part.node.relativePath === "luuppitaustaglow.png"
-  )
-
-  const puolueGlow = logoparts.logoparts.edges.find(
-    part => part.node.relativePath === "puoluetaustaglow.png"
-  )
-
   const puolue = logoparts.logoparts.edges.find(
     part => part.node.relativePath === "puolue.png"
   )
 
   return (
     <LogoContainer>
-      <div></div>
-      <GlowContainer>
-        <Backglow fluid={arrowUGlow.node.childImageSharp.fluid} alt="" />
-      </GlowContainer>
       <ImageContainer>
         <FlickerArrowU fluid={arrowU.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
-      <GlowContainer>
-        <Backglow fluid={arrowDGlow.node.childImageSharp.fluid} alt="" />
-      </GlowContainer>
       <ImageContainer>
         <FlickerArrowD fluid={arrowD.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
-      <GlowContainer>
-        <Backglow fluid={luuppiGlow.node.childImageSharp.fluid} alt="" />
-      </GlowContainer>
       <ImageContainer>
         <NeonSignText fluid={luuppi.node.childImageSharp.fluid} alt="" />
       </ImageContainer>
 
-      <GlowContainer>
-        <Backglow fluid={puolueGlow.node.childImageSharp.fluid} alt="" />
-      </GlowContainer>
       <ImageContainer>
         <NeonSignText fluid={puolue.node.childImageSharp.fluid} alt="" />
       </ImageContainer>

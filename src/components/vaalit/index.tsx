@@ -137,7 +137,13 @@ const ThemeHeadlineContainerPink = styled.div`
 `
 
 export default function Vaalit() {
-  const [themeShown, setThemeShown] = useState([false, false, false])
+  const [themeShown, setThemeShown] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ])
 
   function handleThemeClick(point: number) {
     let newArray = themeShown.concat()
@@ -155,7 +161,7 @@ export default function Vaalit() {
       </HeadlineMobile>
       <ThemeHeadlineContainerBlue onClick={() => handleThemeClick(0)}>
         <TextBlue>
-          Yhtenäisempi ja yhdenvertaisempi ylioppilaskunta 2020
+          Yhtenäisempi ja yhdenvertaisempi ylioppilaskunta 2022
         </TextBlue>
         {themeShown[0] ? (
           <ArrowUpBlue height="3rem" />
@@ -170,7 +176,9 @@ export default function Vaalit() {
           mukana luomassa yliopistoyhteisöä, jonka keskuuteen kaikki ovat
           tervetulleita ja jossa heidän hyvinvoinnista huolehditaan.
           Ylioppilaskunnan tehtävänä on olla siltana eri kampusten välillä ja
-          tuoda niitä tehokkaammin yhteen.
+          tuoda niitä tehokkaammin yhteen. Luuppi_Puolue pitää erityisen
+          tärkeänä digitaalisen saavutettavuuden huomioimista
+          yhdenvertaisuustyössä.
         </ThemeContainer>
       </Collapse>
       <ThemeHeadlineContainerPink onClick={() => handleThemeClick(1)}>
@@ -183,11 +191,12 @@ export default function Vaalit() {
       </ThemeHeadlineContainerPink>
       <Collapse isOpened={themeShown[1]}>
         <ThemeContainer>
-          Keskusta kampuksen tilapolitiikka on historiallisesti ollut melko
+          Keskustakampuksen tilapolitiikka on historiallisesti ollut melko
           opiskelijavastaista. Tämän vuoksi ylioppilaskunnan tulisi ajaa
           yliopisto suuntaan, jossa myös keskustakampukselle saataisiin paremmin
           opiskelutiloja ja parempia tiloja aine- ja harrastejärjestöjen
-          käyttöön.
+          käyttöön. Ylioppilaskunnan tulee myös huolehtia, että
+          kampuskehityksessä opiskelijoiden erilaiset tarpeet huomioidaan.
         </ThemeContainer>
       </Collapse>
       <ThemeHeadlineContainerBlue onClick={() => handleThemeClick(2)}>
@@ -208,7 +217,39 @@ export default function Vaalit() {
           varmistamaan tätä toimintaa tukemalla järjestöjä.
         </ThemeContainer>
       </Collapse>
-      <TextPink>Poliittisesti sitoutumattomampi ylioppilaskunta</TextPink>
+      <ThemeHeadlineContainerPink onClick={() => handleThemeClick(3)}>
+        <TextPink>Poliittisesti sitoutumattomampi ylioppilaskunta</TextPink>
+        {themeShown[3] ? (
+          <ArrowUpPink height="3rem" />
+        ) : (
+          <ArrowDownPink height="3rem" />
+        )}
+      </ThemeHeadlineContainerPink>
+      <Collapse isOpened={themeShown[3]}>
+        <ThemeContainer>
+          Luuppi_Puolueelle on tärkeää, että ylioppilaskunta on poliittisesti
+          sitoutumaton. Poliittinen sitoutumattomuus tekee ylioppilaskunnasta
+          helpommin lähestyttävän ja monipuolisemman, mutta ei kuitenkaan
+          rajoita ylioppilaskunnan ydintoimintaa.
+        </ThemeContainer>
+      </Collapse>
+      <ThemeHeadlineContainerBlue onClick={() => handleThemeClick(4)}>
+        <TextBlue>Kierrätys kunniaan</TextBlue>
+        {themeShown[4] ? (
+          <ArrowUpBlue height="3rem" />
+        ) : (
+          <ArrowDownBlue height="3rem" />
+        )}
+      </ThemeHeadlineContainerBlue>
+      <Collapse isOpened={themeShown[4]}>
+        <ThemeContainer>
+          Ylioppilaskunnan toiminnan tarkempi mitoittaminen ja kestävien
+          hankintojen tekeminen ovat jätteen vähentämisessä keskeisessä
+          roolissa. Myös ylioppilaskunnan järjestäessä tapahtumia tulee
+          huolehtia asiallisesta kierrätyksestä ja kierrätyspisteiden
+          tarjonnasta.
+        </ThemeContainer>
+      </Collapse>
       <Juliste />
     </Container>
   )
