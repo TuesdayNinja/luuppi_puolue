@@ -45,12 +45,7 @@ module.exports = {
     },
     `gatsby-plugin-preact`,
     `gatsby-plugin-smoothscroll`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        icon: "src/images/lp.ico",
-      },
-    },
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
 }
