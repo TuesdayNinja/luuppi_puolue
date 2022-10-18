@@ -153,7 +153,7 @@ export default function Vaalit() {
 
   return (
     <Container id="vaalit">
-      <Headline>Edustajistovaalit 2020</Headline>
+      <Headline>Edustajistovaalit 2022</Headline>
       <HeadlineMobile>
         Edustajisto-
         <br />
