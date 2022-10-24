@@ -141,7 +141,7 @@ export default function Header({ tekija }) {
       </MobileMenu>
       <DesktopMenu>
         <Button onClick={() => scrollTo("#info")}>LUUPPI_PUOLUE</Button>
-        <Button onClick={() => scrollTo("#vaalit")}>VAALIT 2020</Button>
+        <Button onClick={() => scrollTo("#vaalit")}>VAALIT 2022</Button>
         <a href="https://trey.fi/edustajistovaalit/aanesta" target="_blank">
           <Aanesta>ÄÄNESTÄ</Aanesta>
         </a>
